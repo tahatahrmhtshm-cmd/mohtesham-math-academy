@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>محتشم | ریاضی تیزهوشان هفتم، هشتم و نهم</title>
+<meta name="description" content="محتشم؛ درسنامه تمام فصل‌های ریاضی هفتم، هشتم و نهم، بانک سؤال بی‌پایان، بازی ریاضی و معلم هوشمند">
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f8f3e9;--card:#fff;--ink:#2a2118;--mute:#7a6c5a;--acc:#c05a22;--acc2:#1f6f6b;--line:#eadfcb;--ok:#1d7a46;--okb:#dff3e6;--bad:#b3261e;--badb:#fbe3e0;--sh:0 6px 20px rgba(80,50,10,.08);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#17130e;--card:#221c15;--ink:#f3ebdd;--mute:#b3a38c;--acc:#e8905a;--acc2:#58bdb6;--line:#3a3025;--ok:#5fd38d;--okb:#17301f;--bad:#ff8a80;--badb:#3a1c19;--sh:none}}
+:root[data-theme="dark"]{--bg:#17130e;--card:#221c15;--ink:#f3ebdd;--mute:#b3a38c;--acc:#e8905a;--acc2:#58bdb6;--line:#3a3025;--ok:#5fd38d;--okb:#17301f;--bad:#ff8a80;--badb:#3a1c19;--sh:none}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg) url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27140%27 height=%27140%27%3E%3Cg fill=%27%230e7c86%27 fill-opacity=%27.07%27 font-size=%2730%27%3E%3Ctext x=%2710%27 y=%2740%27%3E%CF%80%3C/text%3E%3Ctext x=%2780%27 y=%2790%27%3E%E2%88%91%3C/text%3E%3Ctext x=%2720%27 y=%27120%27%3E%E2%88%9A%3C/text%3E%3Ctext x=%27100%27 y=%2730%27%3E%C3%B7%3C/text%3E%3C/g%3E%3C/svg%3E");color:var(--ink);font-family:Vazirmatn,Tahoma,sans-serif;line-height:1.9}
+.wrap{max-width:820px;margin:0 auto;padding:14px}
+.hero{background:linear-gradient(135deg,#1f6f6b,#c05a22);color:#fff;border-radius:24px;padding:26px 18px;text-align:center;margin-bottom:16px;cursor:pointer;box-shadow:var(--sh)}
+.hero h1{margin:0;font-size:2.6rem;font-weight:800}.hero p{margin:2px 0 0;opacity:.92}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px;margin-bottom:14px;box-shadow:var(--sh)}
+.card h2{margin:0 0 8px;font-size:1.15rem;color:var(--acc2)}
+.btn{padding:11px 16px;border:0;border-radius:12px;background:var(--acc2);color:#fff;font:inherit;font-weight:600;cursor:pointer}
+.btn.alt{background:transparent;border:2px solid var(--acc2);color:var(--acc2)}
+input[type=text]{width:100%;padding:11px 12px;border:2px solid var(--line);border-radius:12px;background:var(--bg);color:var(--ink);font:inherit}
+.row{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}.row>*{flex:1}
+.g{border:2px solid var(--line);background:var(--card);color:var(--ink);border-radius:14px;padding:12px 4px;font:inherit;font-weight:600;cursor:pointer}
+.g.on{background:var(--acc);border-color:var(--acc);color:#fff}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:10px}
+.ch{display:flex;gap:10px;align-items:center;text-align:right;padding:12px;border:2px solid var(--line);border-radius:16px;background:var(--card);color:var(--ink);font:inherit;cursor:pointer;box-shadow:var(--sh)}
+.ch i{font-style:normal;flex:none;width:36px;height:36px;border-radius:50%;background:var(--acc);color:#fff;display:grid;place-items:center;font-weight:800}
+.ch small{display:block;color:var(--mute)}
+.games{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px}
+.gm{padding:16px;border-radius:18px;border:0;color:#fff;font:inherit;font-weight:800;cursor:pointer;background:linear-gradient(135deg,#0e7c86,#2bb3a3)}.gm:nth-child(2){background:linear-gradient(135deg,#1f8f6b,#e0a526)}
+.key{background:var(--bg);border-right:4px solid var(--acc);padding:8px 12px;border-radius:8px;margin-top:10px}
+.opts{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px}
+.opt{padding:12px;border:2px solid var(--line);border-radius:12px;background:var(--bg);color:var(--ink);font:inherit;cursor:pointer;direction:ltr}
+.opt.ok{background:var(--okb);border-color:var(--ok)}.opt.bad{background:var(--badb);border-color:var(--bad)}
+.q{font-size:1.1rem}.sub{color:var(--mute)}.big{font-size:1.4rem;font-weight:800;color:var(--acc);text-align:center}
+.mem{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.mc{min-height:64px;padding:6px;border-radius:12px;border:2px solid var(--line);background:var(--acc2);color:transparent;font:inherit;font-weight:600;cursor:pointer;direction:ltr}
+.mc.up{background:var(--card);color:var(--ink)}.mc.done{background:var(--okb);color:var(--ok);border-color:var(--ok)}
+#log{max-height:300px;overflow-y:auto;display:flex;flex-direction:column;gap:8px;margin-bottom:10px}
+.m{padding:10px 12px;border-radius:14px;max-width:90%;white-space:pre-wrap}.m.u{background:var(--acc);color:#fff;align-self:flex-start}.m.a{background:var(--bg);border:1px solid var(--line);align-self:flex-end}
+.bad{color:var(--bad)}footer{text-align:center;color:var(--mute);font-size:.85rem;padding:14px}
+.hero{position:relative;cursor:default;background:url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27140%27 height=%27140%27%3E%3Cg fill=%27white%27 fill-opacity=%27.17%27 font-size=%2730%27%3E%3Ctext x=%2710%27 y=%2740%27%3E%CF%80%3C/text%3E%3Ctext x=%2780%27 y=%2790%27%3E%E2%88%91%3C/text%3E%3Ctext x=%2720%27 y=%27120%27%3E%E2%88%9A%3C/text%3E%3Ctext x=%27100%27 y=%2730%27%3E%C3%B7%3C/text%3E%3C/g%3E%3C/svg%3E"),linear-gradient(135deg,#0b6e6e,#15a37a 55%,#f0a21a)}.hero h1{cursor:pointer}
+.mb{position:absolute;top:14px;right:14px;width:46px;height:46px;border-radius:50%;border:0;background:rgba(255,255,255,.25);color:#fff;font-size:1.4rem;cursor:pointer}
+.dw{position:fixed;top:0;right:0;bottom:0;width:290px;max-width:85vw;background:var(--card);z-index:20;transform:translateX(105%);transition:.25s;padding:16px;padding-top:calc(16px + env(safe-area-inset-top,0px));overflow:auto;box-shadow:-8px 0 30px rgba(0,0,0,.25)}.dw.open{transform:none}
+#ov{display:none;position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:15}
+.mi{display:block;width:100%;text-align:right;margin:8px 0;padding:12px;border-radius:12px;border:2px solid var(--line);background:var(--bg);color:var(--ink);font:inherit;font-weight:600;cursor:pointer}
+.xpb{height:10px;background:var(--line);border-radius:6px;overflow:hidden;margin:6px 0}.xpb div{height:100%;width:0;background:linear-gradient(90deg,#f0a21a,#16a34a);transition:.4s}
+.tabs{display:grid;grid-template-columns:repeat(auto-fill,minmax(125px,1fr));gap:8px;margin-bottom:14px}
+.tb{padding:14px 6px;border:2px solid var(--line);border-radius:14px;background:var(--card);color:var(--ink);font:inherit;font-weight:600;cursor:pointer;box-shadow:var(--sh)}.tb.on{background:linear-gradient(135deg,#0e7c86,#16a34a);color:#fff;border-color:transparent;transform:translateY(-2px)}
+.fl{display:block;flex:1;min-width:120px;color:var(--mute);font-size:.9rem}.fl input{direction:ltr;text-align:center;font-size:1.2rem;margin-top:4px}
+.go2{width:100%;padding:14px;font-size:1.1rem;background:linear-gradient(135deg,#f0a21a,#e07a1f)}
+.rs{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}.ch2{flex:1;min-width:130px;text-align:center;padding:14px;border-radius:16px;background:linear-gradient(135deg,rgba(240,162,26,.18),rgba(14,124,134,.14));border:1px solid var(--line)}.ch2 small{display:block;color:var(--mute)}.ch2 b{display:block;font-size:1.7rem;color:var(--acc2);word-break:break-all;direction:ltr}
+.st{padding:6px 10px;margin:4px 0;background:var(--bg);border-radius:8px;text-align:left;direction:ltr}.pr{text-align:center;direction:ltr;letter-spacing:2px;overflow-x:auto}
+.mc.sel{background:var(--acc);color:#fff;border-color:var(--acc)}.ch i{font-size:1.2rem}input[type=range]{width:100%;accent-color:#0e7c86}
+.tp{position:absolute;left:0;right:0;bottom:calc(env(safe-area-inset-bottom,0px) + 14px);display:flex;justify-content:space-between;padding:0 16px;touch-action:none}.tp div{display:flex;gap:12px}
+.rk{display:none;position:sticky;top:calc(env(safe-area-inset-top,0px) + 6px);z-index:10;align-items:center;gap:10px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:8px 12px;margin-bottom:12px;box-shadow:var(--sh)}.rk b{white-space:nowrap}.rk .xpb{flex:1;margin:0}.rk.flash{animation:fl .6s}@keyframes fl{50%{background:rgba(240,162,26,.35)}}
+.pop{position:fixed;left:50%;top:30%;z-index:40;font-weight:800;font-size:2rem;color:#f0a21a;text-shadow:0 2px 8px rgba(0,0,0,.45);pointer-events:none;white-space:nowrap;animation:up 1.1s ease-out forwards}@keyframes up{from{opacity:1;transform:translate(-50%,0) scale(.8)}to{opacity:0;transform:translate(-50%,-80px) scale(1.3)}}.tp button{width:68px;height:68px;border-radius:50%;border:2px solid #fff6;background:#ffffff33;color:#fff;font-size:26px;touch-action:none}
+:root:root:root{--bg:#070b14;--card:rgba(255,255,255,.06);--ink:#eaf2ff;--mute:#8fa3c0;--acc:#ffb020;--acc2:#19e6b4;--line:rgba(255,255,255,.13);--ok:#3ef08a;--okb:rgba(62,240,138,.16);--bad:#ff6b6b;--badb:rgba(255,107,107,.16);--sh:0 0 26px rgba(25,230,180,.1)}
+html{color-scheme:dark}
+body{background:radial-gradient(ellipse at 15% -10%,#0f4a63 0,transparent 50%),radial-gradient(ellipse at 95% 8%,#40205f 0,transparent 45%),#070b14 !important}
+body::before{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;animation:dr 40s linear infinite;background:url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27140%27 height=%27140%27%3E%3Cg fill=%27white%27 fill-opacity=%27.06%27 font-size=%2730%27%3E%3Ctext x=%2710%27 y=%2740%27%3E%CF%80%3C/text%3E%3Ctext x=%2780%27 y=%2790%27%3E%E2%88%91%3C/text%3E%3Ctext x=%2720%27 y=%27120%27%3E%E2%88%9A%3C/text%3E%3Ctext x=%27100%27 y=%2730%27%3E%C3%B7%3C/text%3E%3C/g%3E%3C/svg%3E")}
+@keyframes dr{to{background-position:140px 140px}}
+.wrap{position:relative;z-index:1}
+.hero{background:linear-gradient(135deg,rgba(25,230,180,.2),rgba(255,176,32,.14)) !important;border:1px solid rgba(25,230,180,.4);box-shadow:0 0 44px rgba(25,230,180,.2);backdrop-filter:blur(8px)}
+.hero h1{font-size:3.1rem;background:linear-gradient(90deg,#19e6b4,#ffb020);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 0 14px rgba(25,230,180,.45))}.hero p{color:#cfe9ff}
+.mb{background:rgba(25,230,180,.18);border:1px solid rgba(25,230,180,.55);color:#19e6b4}
+.card,.ch,.tb,.opt,.mi,.g,.rk{backdrop-filter:blur(10px)}
+.card{border-radius:6px 24px 6px 24px;border-color:rgba(25,230,180,.28)}.ch{border-radius:4px 20px 4px 20px}.tb{border-radius:4px 16px 4px 16px}
+.btn{background:linear-gradient(135deg,#19e6b4,#0aa6d8);color:#04121a}.btn.alt{background:transparent;color:var(--acc2)}
+.go2{background:linear-gradient(135deg,#ffb020,#ff6a3d);color:#1a0d00}
+.tb.on{background:linear-gradient(135deg,#19e6b4,#0aa6d8);color:#04121a;box-shadow:0 0 20px rgba(25,230,180,.5)}
+.ch i{background:linear-gradient(135deg,#ffb020,#ff6a3d);color:#1a0d00}
+.ch2{border-color:rgba(255,176,32,.35)}.ch2 b{text-shadow:0 0 12px rgba(25,230,180,.55)}
+.dw{background:#0d1424}.rk{border-color:rgba(25,230,180,.35);box-shadow:0 0 20px rgba(25,230,180,.15)}
+.opt:hover,.tb:hover,.ch:hover{border-color:var(--acc2)}
+.dw{width:330px}.mc2{display:flex;gap:12px;align-items:center;padding:14px;margin:10px 0;border-radius:6px 20px 6px 20px;border-color:rgba(25,230,180,.3)}.mc2 i{font-style:normal;font-size:1.6rem;flex:none}.mc2 b{display:block;color:var(--ink)}.mc2 small{display:block;color:var(--mute);font-weight:400;line-height:1.5}.mc2:hover{border-color:var(--acc2);box-shadow:0 0 16px rgba(25,230,180,.25)}
+a.btn{display:block;text-align:center;text-decoration:none;margin:8px 0}
+.mb{position:fixed !important;top:calc(env(safe-area-inset-top,0px) + 12px);right:12px;z-index:25;width:52px;height:52px;background:linear-gradient(135deg,#19e6b4,#7b6cf0);color:#04121a;box-shadow:0 0 20px rgba(25,230,180,.55)}.rk{padding-right:72px}.dw{padding-top:76px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class='hero'><button class='mb' aria-label='منو' onclick='dr(1)'>☰</button><h1 onclick="go('lab')">محتشم π</h1><p>قلمرو جادویی ریاضی</p><p style='font-size:.95rem'>ابزار محاسباتی، درسنامه، بانک سؤال، بازی و معلم هوشمند · هفتم تا نهم</p></div><div id='rk' class='rk'><b id='rt'>رتبه ۱: تازه‌وارد</b><div class='xpb'><div id='rb'></div></div><small id='rx'>۰ XP</small></div><div id='ov' onclick='dr(0)'></div><div class='dw' id='dw'><b id='lv'>سطح ۱: مبتدی</b><div class='xpb'><div id='xb'></div></div><small id='xt' class='sub'>۰ XP</small><hr style='border:0;border-top:1px solid var(--line)'><button class='mi' onclick="go('lab')">🧮 ابزارهای ریاضی</button><button class='mi' onclick="go('ai')">🧙 معلم هوشمند محتشم</button><button class='mi' onclick="go('home')">📚 درس‌ها و بانک سؤال</button><button class='mi' onclick="go('games')">🎮 مینی‌گیم‌ها (هندسه، احتمال، اعداد)</button><button class='mi' onclick="go('timer')">⏱ چالش ۶۰ ثانیه</button><button class='mi' onclick="go('memory')">🃏 بازی حافظه</button></div>
+<div id="main"></div><div id='gm' style='display:none;position:fixed;inset:0;z-index:30;background:#14151a'><canvas id='gc' style='display:block;width:100%;height:100%'></canvas><div style='position:absolute;top:calc(env(safe-area-inset-top,0px) + 8px);left:8px;right:8px;display:flex;gap:8px;direction:rtl;align-items:flex-start'><div style='background:#000b;color:#fff;flex:1;padding:8px 12px;border-radius:10px'><div id='gq' style='font-size:1.15rem'></div><div>امتیاز: <b id='gs'>۰</b> · <span id='ghp'></span></div></div><button class='btn' onclick='gx()'>✖</button></div><div class='tp'><div><button data-k='l'>◀</button><button data-k='r'>▶</button></div><div><button data-k='d'>■</button><button data-k='u'>▲</button></div></div></div>
+<div class="card" id="ai" style="display:none"><h2>🧙 محتشم، معلم هوشمند</h2><p class="sub">سؤال ریاضی‌ات را بنویس؛ برای پاسخ‌گویی باید سرور آنلاین سایت تنظیم شده باشد. کلید محرمانه در این صفحه وارد نمی‌شود.</p><div class="sub" id="keyStatus">در حال بررسی اتصال سرور…</div><div id="log"></div><div class="row"><input type="text" id="inp" placeholder="سؤالت را بنویس..." style="flex:3"><button class="btn" id="send">بپرس</button></div><div class="bad" id="aiErr"></div></div>
+<footer>درسنامه‌ها و سؤال‌ها اصلی و تولید محتشم هستند؛ کنار کتاب درسی استفاده کن.</footer>
+</div>
+<script>
+const G={7:"هفتم",8:"هشتم",9:"نهم"};
+const C={
+7:[["راهبردهای حل مسئله","الگو بساز، جدول بکش، حدس بزن و بررسی کن.","جملهٔ n‌ام: a+(n−1)d",["seq"]],
+["عددهای صحیح","دمای قله −۵ بود و ۸ درجه گرم شد؛ جمع و تفریق روی محور.","a−(−b)=a+b",["int","imul"]],
+["جبر و معادله","ترازو را متعادل نگه‌دار؛ هر کار روی یک کفه، روی کفهٔ دیگر هم.","ax+b=c ⇒ x=(c−b)/a",["lin","lin2"]],
+["هندسه و استدلال","زاویه‌ها را بشمار و دلیل بیاور.","مجموع زوایای مثلث ۱۸۰°",["tri"]],
+["شمارنده‌ها و عددهای اول","عدد اول فقط دو شمارنده دارد.","ب.م.م × ک.م.م = حاصل‌ضرب دو عدد",["gcd","lcm","prime"]],
+["سطح و حجم","رنگ دیوار سطح است، پر کردن استخر حجم.","حجم = طول × عرض × ارتفاع",["area","vol"]],
+["توان و جذر","باکتری هر ساعت دو برابر می‌شود.","a^m × a^n = a^(m+n)",["pow","sqrt"]],
+["بردار و مختصات","روی نقشهٔ گنج: راست/چپ و بالا/پایین.","انتقال: (x,y)→(x+a,y+b)",["move"]],
+["آمار و احتمال","میانگین نقطهٔ تعادل داده‌هاست.","احتمال = مطلوب ÷ کل",["mean","prob"]]],
+8:[["عددهای صحیح و گویا","کسرها و درصدها را روی محور بشناس.","a% از N = N×a÷۱۰۰",["int","imul","pct"]],
+["عددهای اول","هر عدد را به اول‌ها بشکن.","ب.م.م و ک.م.م از تجزیه",["gcd","lcm","prime"]],
+["چندضلعی‌ها","از یک رأس قطر بکش تا مثلث بسازی.","مجموع زوایا (n−۲)×۱۸۰ · قطر n(n−۳)/۲",["poly","diag","regang"]],
+["عبارت‌های جبری","زمین مربعی به ضلع a+b را تکه‌تکه کن.","(a+b)²=a²+2ab+b²",["expand","lin"]],
+["خط و معادله","شیب یعنی تندیِ بالا رفتن.","شیب = Δy ÷ Δx",["slope","line"]],
+["مثلث","وتر، مثلث قائم‌الزاویه را می‌سازد.","فیثاغورس a²+b²=c²",["tri","pyth"]],
+["توان و جذر","ضرب تکراری و ریشهٔ کامل.","(a^m)^n = a^(mn)",["pow","sqrt"]],
+["بردار و مختصات","وسط دو نقطه را از میانگین مختصات بگیر.","وسط: ((x₁+x₂)/۲, (y₁+y₂)/۲)",["move","mid"]],
+["دایره","کمان و زاویه، دو روی یک سکه.","زاویهٔ محاطی = نصف مرکزی",["circ"]]],
+9:[["مجموعه‌ها","اجتماع و اشتراک مثل دو گروه دوستانند.","|A∪B| = |A|+|B|−|A∩B|",["setu"]],
+["عددهای حقیقی","رادیکال‌ها را هم‌خانواده کن.","√(a²b) = a√b",["sqrt","rad"]],
+["استدلال و اثبات در هندسه","هر حکم، دلیل لازم دارد.","مجموع زوایای n‌ضلعی (n−۲)×۱۸۰",["tri","poly"]],
+["توان و ریشه","توان‌های صحیح و ریشه‌ها.","a^m × a^n = a^(m+n)",["pow","rad"]],
+["عبارت‌های جبری","اتحادها و نابرابری‌ها.","(a+b)(a−b)=a²−b²",["expand","ineq"]],
+["خط و معادله‌های خطی","خط و دستگاه؛ نقطهٔ برخورد.","y=mx+c · جمع و تفاضل برای دستگاه",["slope","line","sys"]],
+["عبارت‌های گویا","کسر جبری را ساده کن.","(x²−a²)/(x−a) = x+a",["rat"]],
+["حجم و مساحت","هرم یک‌سوم منشور هم‌قاعده است.","حجم هرم = ⅓ × قاعده × ارتفاع",["vol","pyr"]]]};
+const R=(a,b)=>a+Math.floor(Math.random()*(b-a+1)),P=a=>a[R(0,a.length-1)],L=s=>`<bdi dir="ltr">${s}</bdi>`,sg=n=>n<0?'− '+(-n):'+ '+n;
+const CP=[[2,3],[3,4],[4,5],[5,6],[2,5],[3,7],[5,7]];
+const isP=n=>{if(n<2)return 0;for(let i=2;i*i<=n;i++)if(n%i==0)return 0;return 1};
+const Q={
+seq(){const a=R(1,9),d=R(2,7),n=R(8,20);return[`جملهٔ ${n}ام الگوی ${L(a+', '+(a+d)+', '+(a+2*d)+', …')} چند است؟`,a+(n-1)*d]},
+int(){const a=R(-15,15),b=R(-15,15),c=R(-15,15);return[L(`(${a}) + (${b}) − (${c})`),a+b-c]},
+imul(){const a=R(-9,9),b=R(-9,9),c=R(-9,9);return[L(`(${a}) × (${b}) − (${c})`),a*b-c]},
+lin(){const x=R(-9,12),a=R(2,9),b=R(-12,12);return[`${L(a+'x '+sg(b)+' = '+(a*x+b))} ⇒ x چند است؟`,x]},
+lin2(){const x=R(-6,9),a=R(4,9),c=R(1,3),b=R(-9,9),d=(a-c)*x+b;return[`${L(a+'x '+sg(b)+' = '+c+'x '+sg(d))} ⇒ x؟`,x]},
+tri(){const A=R(30,80),B=R(30,80);return[`دو زاویهٔ مثلث ${A}° و ${B}° است؛ زاویهٔ سوم؟`,180-A-B]},
+gcd(){const g=R(2,9),[p,q]=P(CP);return[`ب.م.م ${g*p} و ${g*q} چند است؟`,g]},
+lcm(){const g=R(1,4),[p,q]=P(CP);return[`ک.م.م ${g*p} و ${g*q} چند است؟`,g*p*q]},
+
+area(){const b=R(4,20)*2,h=R(3,15);return[`مساحت مثلثی با قاعدهٔ ${b} و ارتفاع ${h}؟`,b*h/2]},
+vol(){const a=R(2,9),b=R(2,9),c=R(2,9);return[`حجم مکعب‌مستطیل ${L(a+'×'+b+'×'+c)}؟`,a*b*c]},
+pow(){const m=R(2,9),n=R(2,9);return[L(`2^${m} × 2^${n} = 2^?`),m+n]},
+sqrt(){const k=R(3,15),j=R(3,15);return[L(`√${k*k} + √${j*j}`),k+j]},
+move(){const a=R(-5,8),b=R(-5,8),x=R(2,7),y=R(2,7);return[`نقطهٔ ${L(`(${a}, ${b})`)} را ${x} واحد راست و ${y} واحد بالا ببر؛ مجموع مختصات جدید؟`,a+b+x+y]},
+mean(){const m=R(10,40),d=R(1,9),e=R(1,9);return[`میانگین ${L([m-d,m+d,m-e,m+e,m].join(', '))} ؟`,m]},
+prob(){const t=P([4,5,10,20,25,50]),a=R(1,t-1);return[`کیسه‌ای ${a} مهرهٔ قرمز و ${t-a} آبی دارد؛ احتمال قرمز چند درصد است؟`,a*100/t]},
+pct(){const p=P([10,20,25,50,5]),N=R(2,20)*20;return[`${p}% از ${N}؟`,N*p/100]},
+poly(){const n=R(5,14);return[`مجموع زوایای داخلی ${n}ضلعی؟`,(n-2)*180]},
+diag(){const n=R(5,14);return[`تعداد قطرهای ${n}ضلعی؟`,n*(n-3)/2]},
+regang(){const n=P([3,4,5,6,8,9,10,12]);return[`زاویهٔ داخلی ${n}ضلعی منتظم؟`,(n-2)*180/n]},
+expand(){const a=R(2,9),b=R(2,9);return[L(`(${a}+${b})² − (${a}−${b})²`),4*a*b]},
+slope(){const m=R(-5,6),x=R(-4,4),y=R(-6,6),d=R(1,4);return[`شیب خط گذرنده از ${L(`(${x},${y})`)} و ${L(`(${x+d},${y+m*d})`)}؟`,m]},
+line(){const m=R(2,6),c=R(-8,8),k=R(2,9);return[`در ${L('y = '+m+'x '+sg(c))} به ازای ${L('x='+k)}، y؟`,m*k+c]},
+pyth(){const[a,b,c]=P([[3,4,5],[5,12,13],[8,15,17],[7,24,25]]),s=R(1,3);return[`وتر مثلث قائم‌الزاویه با اضلاع ${a*s} و ${b*s}؟`,c*s]},
+mid(){const a=R(-4,5),b=R(-4,5),c=R(-4,5),d=R(-4,5);return[`وسط ${L(`(${2*a},${2*b})`)} و ${L(`(${2*c},${2*d})`)}؛ مجموع مختصات؟`,a+c+b+d]},
+circ(){const k=R(15,60);return[`زاویهٔ مرکزی ${2*k}° است؛ زاویهٔ محاطیِ روبه‌رو به همان کمان؟`,k]},
+setu(){const a=R(10,30),b=R(10,30),i=R(2,9);return[`${L(`|A|=${a}, |B|=${b}, |A∩B|=${i}`)} ⇒ ${L('|A∪B|')}؟`,a+b-i]},
+rad(){const a=R(2,6),b=R(2,6),m=P([2,3,5,6,7]);return[`${L(`√${a*a*m} + √${b*b*m} = k√${m}`)} ⇒ k؟`,a+b]},
+ineq(){const a=R(2,7);let c=R(10,60);if(c%a==0)c++;return[`کوچک‌ترین عدد صحیح x با ${L(a+'x > '+c)}؟`,Math.floor(c/a)+1]},
+sys(){const x=R(2,12),y=R(1,x-1);return[L(`x+y=${x+y}, x−y=${x-y}`)+' ⇒ x؟',x]},
+rat(){const a=R(2,9),x=R(a+1,a+12);return[`مقدار ${L(`(x²−${a*a})/(x−${a})`)} به ازای ${L('x='+x)}؟`,x+a]},
+pyr(){const b=3*R(2,12),h=R(3,12);return[`حجم هرم با مساحت قاعدهٔ ${b} و ارتفاع ${h}؟`,b*h/3]}};
+Q.prime=()=>{let n=R(20,90),m=n;while(!isP(++m));return[`کوچک‌ترین عدد اول بزرگ‌تر از ${n}؟`,m]};
+function mk(k){const[t,a]=Q[k]();const s=new Set([a]);for(const d of[1,-1,2,-2,3,10,-10,5])if(s.size<4&&Math.random()<.7)s.add(a+d);let i=1;while(s.size<4)s.add(a+i++*7);return{t,a,o:[...s].sort(()=>Math.random()-.5)}}
+const fa=n=>String(n).replace(/\d/g,d=>'۰۱۲۳۴۵۶۷۸۹'[d]);
+let me={name:'',fam:'',grade:7,ok:0},st={ok:0,n:0},M=document.getElementById('main'),tm=null;
+const gens=g=>[...new Set(C[g].flatMap(c=>c[3]))];
+function go(v,i){if(!me.ok)v='gate';document.getElementById('rk').style.display=me.ok?'flex':'none';clearInterval(tm);dr(0);document.getElementById('ai').style.display=['ai','home','ch','timer','memory'].includes(v)?'block':'none';window.scrollTo(0,0);
+if(v==='gate')gate();else if(v==='lab')lab();else if(v==='games')games();else if(v==='formulas')formulas();else if(v==='books')books();else if(v==='ang')ang();else if(v==='grid')grd();else if(v==='prime')prm();else if(v==='dice')dice();else if(v==='gta'){games();gta()}else if(v==='ai')aiv();else if(v==='start')M.innerHTML=`<div class="card"><h2>سلام! به محتشم خوش اومدی 👋</h2><p>اسمت چیه و کدوم پایه‌ای؟</p><input type="text" id="nm" placeholder="اسم تو" value="${me.name}"><div class="row">${[7,8,9].map(g=>`<button class="g ${g===me.grade?'on':''}" onclick="me.name=document.getElementById('nm').value;me.grade=${g};go('start')">پایهٔ ${G[g]}</button>`).join('')}</div><button class="btn" style="width:100%" onclick="begin()">شروع ماجراجویی</button></div>`;
+else if(v==='home')M.innerHTML=`<div class="card"><h2>${me.name}، فصل‌های ریاضی ${G[me.grade]}</h2><p class="sub">درسنامه + بانک سؤال بی‌پایان برای هر فصل. امتیاز این نشست: ${fa(st.ok)} درست از ${fa(st.n)}</p></div><div class="games"><button class="gm" onclick="go('timer')">⏱ چالش ۶۰ ثانیه</button><button class="gm" onclick="go('memory')">🃏 بازی حافظه</button></div><div class="grid">${C[me.grade].map((c,k)=>`<button class="ch" onclick="go('ch',${k})"><i>${fa(k+1)}</i><span><b>${c[0]}</b><small>درسنامه و سؤال</small></span></button>`).join('')}</div>`;
+else if(v==='ch'){const c=C[me.grade][i];M.innerHTML=`<button class="btn alt" onclick="go('home')">← فصل‌ها</button><div class="card" style="margin-top:12px"><h2>📘 فصل ${fa(i+1)}: ${c[0]}</h2><p>${c[1]}</p><div class="key">💡 ${c[2]}</div><div class="key">🧭 روش حل:<br>${c[3].map(k=>'• '+MT[k]).join('<br>')}</div><div class="key">🎯 نکتهٔ تیزهوشان: ${TP[me.grade][i]}</div></div><div class="card"><h2>✍️ مثال را خودت حل کن</h2><div id="wx"></div></div><div class="card"><h2>🧩 بانک سؤال</h2><div id="qb"></div></div>`;const w=mk(P(c[3]));document.getElementById('wx').innerHTML=`<p class="q">${w.t}</p><button class="btn alt" onclick="this.nextElementSibling.style.display='block';this.style.display='none'">نمایش جواب</button><p style="display:none">✅ جواب: <b>${w.a}</b></p>`;qs(c[3])}
+else if(v==='timer'){let t=60,sc=0,gs=gens(me.grade);M.innerHTML=`<button class="btn alt" onclick="go('home')">← خانه</button><div class="card" style="margin-top:12px"><div class="big" id="tt">⏱ ۶۰</div><div id="tq"></div></div>`;
+const nx=()=>{const q=mk(P(gs));document.getElementById('tq').innerHTML=`<p class="q">${q.t}</p><div class="opts">${q.o.map(o=>`<button class="opt" data-v="${o}">${o}</button>`).join('')}</div>`;document.querySelectorAll('#tq .opt').forEach(b=>b.onclick=()=>{if(t<=0)return;if(+b.dataset.v===q.a){sc++;addXp(3)}st.n++;if(+b.dataset.v===q.a)st.ok++;nx()})};nx();
+tm=setInterval(()=>{t--;document.getElementById('tt').textContent='⏱ '+fa(t);if(t<=0){clearInterval(tm);document.getElementById('tq').innerHTML=`<p class="big">${me.name}، امتیاز تو: ${fa(sc)} 🎉</p><button class="btn" style="width:100%" onclick="go('timer')">دوباره</button>`}},1000)}
+else if(v==='memory'){const ks=['int','lin','sqrt','pow','gcd','pct'];let it,ok=0;do{it=ks.map(k=>Q[k]())}while(new Set(it.map(x=>x[1])).size<6);
+const cs=it.flatMap((x,j)=>[[j,x[0]],[j,x[1]]]).sort(()=>Math.random()-.5);let sel=null,left=6;
+M.innerHTML=`<button class="btn alt" onclick="go('home')">← خانه</button><div class="card" style="margin-top:12px"><h2>🃏 هر عبارت را با جوابش جفت کن</h2><div class="mem">${cs.map((c,j)=>`<button class="mc" data-j="${j}">${c[1]}</button>`).join('')}</div><p class="big" id="mr"></p></div>`;
+const bs=[...document.querySelectorAll('.mc')];bs.forEach(b=>b.onclick=()=>{if(b.classList.contains('up')||b.classList.contains('done'))return;b.classList.add('up');
+if(!sel){sel=b;return}const a=cs[+sel.dataset.j][0],c=cs[+b.dataset.j][0],s=sel;sel=null;
+if(a===c){s.classList.add('done');b.classList.add('done');if(!--left)document.getElementById('mr').textContent='آفرین '+me.name+'! همه جفت شدند 🎉'}
+else setTimeout(()=>{s.classList.remove('up');b.classList.remove('up')},700)})}}
+function qs(ks){const el=document.getElementById('qb');let q=mk(P(ks));
+el.innerHTML=`<p class="q">${q.t}</p><div class="opts">${q.o.map(o=>`<button class="opt" data-v="${o}">${o}</button>`).join('')}</div><p id="fb" class="sub"></p><button class="btn" id="nx" style="display:none">سؤال بعدی ←</button>`;
+const bs=el.querySelectorAll('.opt');bs.forEach(b=>b.onclick=()=>{if(bs[0].disabled)return;bs.forEach(x=>{x.disabled=true;if(+x.dataset.v===q.a)x.classList.add('ok')});st.n++;if(+b.dataset.v===q.a){st.ok++;addXp(5);document.getElementById('fb').textContent='✅ آفرین!'}else{b.classList.add('bad');document.getElementById('fb').textContent='❌ جواب درست: '+q.a}document.getElementById('nx').style.display='block'});
+document.getElementById('nx').onclick=()=>qs(ks)}
+function begin(){me.name=(document.getElementById('nm').value||'').trim();if(!me.name){document.getElementById('nm').focus();return}st={ok:0,n:0};document.getElementById('log').innerHTML='';hist.length=0;add('a',`سلام ${me.name}! من محتشم هستم 🧙 هر جا گیر کردی بپرس.`);go('home')}
+const hist=[];let busy=false;
+async function checkServer(){
+ const status=document.getElementById('keyStatus');
+ try { const r=await fetch('/api/health'); const d=await r.json();
+  status.textContent=d.aiConfigured?'اتصال سرور برقرار است؛ سؤال خودت را بپرس.':'سرور در دسترس است، اما مدیر سایت هنوز کلید Gemini را در تنظیمات محرمانهٔ سرور وارد نکرده است.';
+ } catch(e) { status.textContent='سرور هنوز راه‌اندازی نشده یا این صفحه به‌صورت فایل محلی باز شده است.'; }
+}
+checkServer();
+function add(c,t){const l=document.getElementById('log'),d=document.createElement('div');d.className='m '+c;d.textContent=t;l.appendChild(d);l.scrollTop=l.scrollHeight;return d}
+async function ask(text){
+ if(busy||!text.trim())return;
+ const err=document.getElementById('aiErr');err.textContent='';
+ busy=true;add('u',text);const el=add('a','محتشم در حال فکر کردن است…');
+ try{
+  const r=await fetch('/api/chat',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({message:text,history:hist.slice(-8),student:{grade:me.grade}})});
+  const data=await r.json().catch(()=>({}));
+  if(!r.ok)throw new Error(data.error||'پاسخ از سرور دریافت نشد.');
+  const answer=String(data.reply||'پاسخی دریافت نشد.');el.textContent=answer;
+  hist.push({role:'user',content:text},{role:'assistant',content:answer});
+ }catch(e){el.remove();err.textContent=(e&&e.message)||'ارتباط با سرور برقرار نشد. آدرس سایت و راه‌اندازی سرور را بررسی کن.'}
+ finally{busy=false}
+}
+document.getElementById('send').onclick=()=>{const i=document.getElementById('inp'),v=i.value.trim();if(!v)return;i.value='';ask(v)};
+document.getElementById('inp').addEventListener('keydown',e=>{if(e.key==='Enter')document.getElementById('send').click()});
+let xp=0,cur=0;
+function addXpOld(n){xp+=n;const l=Math.floor(xp/100);document.getElementById('lv').textContent='سطح '+fa(l+1)+': '+['مبتدی','کنجکاو','کاشف','ریاضی‌دان','استاد'][Math.min(l,4)];document.getElementById('xb').style.width=(xp%100)+'%';document.getElementById('xt').textContent=fa(xp)+' XP'}
+function dr(o){document.getElementById('dw').classList.toggle('open',!!o);document.getElementById('ov').style.display=o?'block':'none'}
+const gc=(a,b)=>b?gc(b,a%b):a;
+const fac=n=>{const f=[];for(let p=2;p*p<=n;p++)while(n%p==0){f.push(p);n/=p}if(n>1)f.push(n);return f};
+const grp=f=>{const m={};f.forEach(p=>m[p]=(m[p]||0)+1);return Object.entries(m).map(([p,e])=>e>1?p+'<sup>'+e+'</sup>':p).join(' × ')};
+const rs=(...x)=>`<div class='rs'>${x.map(([a,b])=>`<div class='ch2'><small>${a}</small><b>${b}</b></div>`).join('')}</div>`;
+const N=(v,k)=>{const n=Math.floor(+v[k]);if(!(n>=1))throw'یک عدد طبیعی (۱ یا بزرگ‌تر) وارد کن';return n};
+const T=[
+['ب.م.م / ک.م.م',['عدد اول','عدد دوم'],[48,180],v=>{const a=N(v,0),b=N(v,1);let x=a,y=b,s=[];while(y){s.push(`${x} = ${y} × ${Math.floor(x/y)} + ${x%y}`);[x,y]=[y,x%y]}return rs(['ب.م.م',x],['ک.م.م',a/x*b])+`<p class='sub'>الگوریتم اقلیدس:</p>`+s.map(t=>`<div class='st'>${t}</div>`).join('')+`<p class='sub'>تجزیه: ${L(grp(fac(a)))} و ${L(grp(fac(b)))}</p>`}],
+['تشخیص اول',['عدد'],[97],v=>{const n=N(v,0);if(n<2)return rs(['نتیجه','اول نیست']);let d=0;for(let p=2;p*p<=n;p++)if(n%p==0){d=p;break}return d?rs(['نتیجه','مرکب'],['کوچک‌ترین شمارنده',d]):rs(['نتیجه','اول ✅'])}],
+['تجزیه عوامل',['عدد'],[360],v=>{const n=N(v,0);return n<2?rs(['نتیجه','تجزیه ندارد']):rs(['تجزیه',grp(fac(n))])}],
+['شمارش مقسوم‌علیه',['عدد'],[360],v=>{const n=N(v,0);if(n>1e7)throw'عدد را کوچک‌تر بده';const d=[];for(let i=1;i*i<=n;i++)if(n%i==0){d.push(i);if(i*i!=n)d.push(n/i)}d.sort((a,b)=>a-b);return rs(['تعداد',d.length],['مجموع',d.reduce((a,b)=>a+b)])+`<div class='st'>${d.join(', ')}</div>`}],
+['توان',['پایه','توان'],[2,20],v=>{const a=Math.floor(+v[0]),n=N(v,1);if(isNaN(a)||n>300)throw'ورودی نامعتبر';return rs(['حاصل',(BigInt(a)**BigInt(n)).toString()])}],
+['فاکتوریل',['n'],[10],v=>{const n=Math.floor(+v[0]);if(!(n>=0&&n<=60))throw'عددی بین ۰ تا ۶۰';let r=1n;for(let i=2n;i<=BigInt(n);i++)r*=i;return rs([n+'!',r.toString()])}],
+['رادیکال',['عدد زیر رادیکال'],[72],v=>{const n=N(v,0);let a=1;for(let k=Math.floor(Math.sqrt(n));k>1;k--)if(n%(k*k)==0){a=k;break}const b=n/(a*a);return rs(['ساده‌شده',b==1?a:(a==1?'':a)+'√'+b],['تقریبی',Math.sqrt(n).toFixed(4)])}],
+['فیثاغورث',['ضلع اول','ضلع دوم'],[3,4],v=>{const a=+v[0],b=+v[1];if(!(a>0&&b>0))throw'دو عدد مثبت بده';const c=Math.sqrt(a*a+b*b);return rs(['وتر',Number.isInteger(c)?c:c.toFixed(4)],['c²',a*a+b*b])}],
+['زوایای چندضلعی',['تعداد ضلع‌ها'],[8],v=>{const n=N(v,0);if(n<3)throw'حداقل ۳ ضلع';return rs(['مجموع زوایا',(n-2)*180+'°'],['زاویهٔ منتظم',+(((n-2)*180)/n).toFixed(2)+'°'],['قطرها',n*(n-3)/2])}],
+['میانگین',['اعداد (با ویرگول)'],['12, 15, 9, 20'],v=>{const a=v[0].split(/[^0-9.-]+/).filter(Boolean).map(Number);if(!a.length||a.some(isNaN))throw'اعداد را با ویرگول جدا کن';a.sort((x,y)=>x-y);const m=a.length>>1;return rs(['میانگین',+(a.reduce((x,y)=>x+y)/a.length).toFixed(3)],['میانه',a.length%2?a[m]:(a[m-1]+a[m])/2],['دامنه',a[a.length-1]-a[0]])}],
+['ترکیب',['n','r'],[10,3],v=>{const n=N(v,0),r=Math.floor(+v[1]);if(!(r>=0&&r<=n&&n<=60))throw'۰ ≤ r ≤ n ≤ ۶۰';let p=1n,f=1n;for(let i=0;i<r;i++)p*=BigInt(n-i);for(let i=2n;i<=BigInt(r);i++)f*=i;return rs(['ترکیب C',(p/f).toString()],['جایگشت P',p.toString()])}],
+['کسر مصری',['صورت','مخرج'],[5,6],v=>{let p=N(v,0),q=N(v,1);if(p>=q)throw'کسر باید کوچک‌تر از ۱ باشد';const o=[];while(p>0&&o.length<9){const d=Math.ceil(q/p);o.push('1/'+d);p=p*d-q;q*=d;const g=gc(p,q);p/=g;q/=g;if(q>1e12)break}return rs(['کسر مصری',o.join(' + ')])}],
+['مثلث خیام',['تعداد ردیف'],[7],v=>{const n=N(v,0);if(n>14)throw'حداکثر ۱۴ ردیف';let r=[1],o='';for(let i=0;i<n;i++){o+=`<div class='pr'>${r.join('  ')}</div>`;r=[1,...r.slice(1).map((x,k)=>x+r[k]),1]}return o}],
+['ماشین حساب',['عبارت'],['(12+8)*3^2'],v=>{const s=v[0].replace(/×/g,'*').replace(/÷/g,'/');if(!/^[0-9+*/().^% -]+$/.test(s))throw'فقط عدد و + − × ÷ ^ ( )';const r=Function('return ('+s.replace(/\^/g,'**')+')')();return rs(['حاصل',+(+r).toPrecision(12)])}]];
+function lab(){const t=T[cur];M.innerHTML=`<p class='sub'>سلام ${me.name} ${me.fam} · کلاس ${G[me.grade]} 👋</p><div class='tabs'>${T.map((x,k)=>`<button class='tb ${k==cur?'on':''}' onclick='cur=${k};lab()'>${x[0]}</button>`).join('')}</div><div class='card'><h2>${t[0]}</h2><div class='row'>${t[1].map((l,k)=>`<label class='fl'>${l}<input type='text' class='ti' value='${t[2][k]}'></label>`).join('')}</div><button class='btn go2' id='gb'>محاسبه ✨</button><div id='out'></div></div>`;
+const run=()=>{const v=[...document.querySelectorAll('.ti')].map(i=>i.value.trim());try{document.getElementById('out').innerHTML=t[3](v)}catch(e){document.getElementById('out').innerHTML=`<p class='bad'>${e}</p>`}};
+document.getElementById('gb').onclick=run;document.querySelectorAll('.ti').forEach(i=>i.addEventListener('keydown',e=>{if(e.key==='Enter')run()}));run()}
+function aiv(){M.innerHTML=`<div class='card'><h2>🧙 معلم هوشمند محتشم</h2><p class='sub'>هر سؤال ریاضی داری بپرس؛ راهنمایی گام‌به‌گام می‌گیری.</p></div>`;if(!document.getElementById('log').children.length)add('a','سلام! من محتشم هستم 🧙 چه سؤالی داری؟')}
+const TP={7:['اول الگو را در جدول بنویس، بعد فرمول بساز و دست‌کم ۳ جمله را چک کن.','−(−۳)=+۳ ولی (−۳)²=۹ و −۳²=−۹؛ به علامت‌ها دقت کن.','جواب معادله را در معادلهٔ اصلی بگذار و درستی‌اش را بررسی کن.','هر جملهٔ اثبات یک دلیل دارد: فرض، تعریف یا قضیهٔ قبلی.','ب.م.م از هر دو عدد کوچک‌تر یا مساوی است و ک.م.م بزرگ‌تر یا مساوی؛ هر دو را از تجزیه بساز.','۱ متر=۱۰۰ سانتی‌متر ولی ۱ متر مربع=۱۰۰۰۰ سانتی‌متر مربع.','a⁰=۱ و (ab)ⁿ=aⁿbⁿ؛ ولی (a+b)ⁿ≠aⁿ+bⁿ.','در مختصات اول x بنویس و بعد y؛ راست x را زیاد می‌کند و بالا y را.','میانگین به داده‌های دور از بقیه حساس است، میانه نه؛ احتمال همیشه بین ۰ و ۱ است.'],8:['کسرها را با مخرج مشترک یا تبدیل به درصد مقایسه کن.','هر عدد مرکب یک تجزیهٔ یکتا به اول‌ها دارد.','n‌ضلعی از هر رأس n−۳ قطر دارد و n−۲ مثلث می‌سازد.','۵۱×۴۹=۵۰²−۱؛ اتحاد مزدوج حساب ذهنی را سریع می‌کند.','خط‌های موازی شیب برابر دارند و در خط‌های عمود حاصل‌ضرب شیب‌ها −۱ است.','فیثاغورث فقط برای مثلث قائم‌الزاویه است؛ در هر مثلث، مجموع دو ضلع از ضلع سوم بزرگ‌تر است.','√(a²)=|a| و √(a+b)≠√a+√b.','وسط دو نقطه میانگین مختصات‌هاست؛ قرینه نسبت به محور x یعنی علامت y عوض شود.','زاویهٔ محاطی روبه‌رو به قطر ۹۰° است و مماس بر شعاع عمود است.'],9:['برای شمارش اجتماع، اشتراک را یک بار کم کن تا دو بار نشماری.','√۲ گنگ است؛ بین هر دو عدد حقیقی، هم گویا و هم گنگ پیدا می‌شود.','مثال نقض یک حکم کلی را رد می‌کند، ولی مثال تأیید آن را ثابت نمی‌کند.','aᵐ÷aⁿ=aᵐ⁻ⁿ و a⁻ⁿ=۱/aⁿ؛ ریشه را هم می‌شود به توان کسری نوشت.','ضرب یا تقسیم دو طرف نامعادله در عدد منفی جهتش را برعکس می‌کند.','دستگاه را با جمع و تفریق یا جانشینی حل کن؛ جواب نقطهٔ برخورد دو خط است.','قبل از ساده‌کردن کسر جبری، تجزیه کن و شرط مخرج≠۰ را یادت نرود.','حجم هرم و مخروط یک‌سوم منشور و استوانهٔ هم‌قاعده است؛ حجم کره ۴/۳πr³.']};
+const GM=[['ang','📐','حدس زاویه','هندسه · اندازهٔ زاویه را حدس بزن'],['grid','🔷','مساحت روی شبکه','هندسه · مساحت مثلث را پیدا کن'],['prime','🎯','شکار عددهای اول','عددی · همهٔ اول‌ها را انتخاب کن'],['dice','🎲','پنل احتمال','احتمال · پرتاب دو تاس'],['gta','🚗','ماشین‌سوار ریاضی','رانندگی · عدد درست را با ماشین بگیر'],['timer','⏱','چالش ۶۰ ثانیه','سرعت محاسبه'],['memory','🃏','بازی حافظه','عبارت و جواب را جفت کن']];
+function games(){M.innerHTML=`<div class='grid'>${GM.map(g=>`<button class='ch' onclick="go('${g[0]}')"><i>${g[1]}</i><span><b>${g[2]}</b><small>${g[3]}</small></span></button>`).join('')}</div>`}
+function pick(a,nx){const bs=document.querySelectorAll('.opt');bs.forEach(b=>b.onclick=()=>{if(bs[0].disabled)return;bs.forEach(x=>{x.disabled=true;if(+x.dataset.v===a)x.classList.add('ok')});const ok=+b.dataset.v===a;if(ok)addXp(5);else b.classList.add('bad');document.getElementById('fb').textContent=ok?'✅ آفرین!':'❌ جواب درست: '+a;const n=document.getElementById('nx');n.style.display='block';n.onclick=nx})}
+function ang(){const a=R(15,165),r=a*Math.PI/180,rot=R(0,359);
+M.innerHTML=`<div class='card'><h2>📐 حدس زاویه</h2><p class='sub'>اندازهٔ زاویه را با لغزنده حدس بزن (خطای کمتر از ۵ درجه قبول است).</p><svg viewBox='-60 -60 120 120' width='100%' height='240'><g transform='rotate(${rot})'><line x1='0' y1='0' x2='50' y2='0' stroke='#0e7c86' stroke-width='2'/><line x1='0' y1='0' x2='${50*Math.cos(r)}' y2='${-50*Math.sin(r)}' stroke='#f0a21a' stroke-width='2'/><path d='M18 0A18 18 0 0 0 ${18*Math.cos(r)} ${-18*Math.sin(r)}' fill='none' stroke='#d0508a' stroke-width='1.5'/></g></svg><div class='big' id='sv'>۹۰°</div><input type='range' id='sl' min='0' max='180' value='90'><button class='btn' style='width:100%;margin-top:10px' id='ck'>بررسی</button><p class='sub' id='fb'></p><button class='btn alt' id='nx' style='display:none'>زاویهٔ بعدی ←</button></div>`;
+const sl=document.getElementById('sl');sl.oninput=()=>document.getElementById('sv').textContent=fa(sl.value)+'°';
+document.getElementById('ck').onclick=()=>{const d=Math.abs(sl.value-a);if(d<=5)addXp(6);document.getElementById('fb').textContent=(d<=5?'🎉 عالی! ':'نزدیک شدی؛ ')+'اندازهٔ واقعی: '+fa(a)+'° (خطای '+fa(d)+'°)';const n=document.getElementById('nx');n.style.display='block';n.onclick=ang}}
+function grd(){let p,c;do{p=[0,1,2].map(()=>[R(0,8),R(0,8)]);c=Math.abs((p[1][0]-p[0][0])*(p[2][1]-p[0][1])-(p[2][0]-p[0][0])*(p[1][1]-p[0][1]))}while(c<4);
+const a=c/2,s=new Set([a]);while(s.size<4)s.add(a+P([-3,-2,-1,-.5,.5,1,2,3]));const o=[...s].filter(x=>x>0).sort(()=>Math.random()-.5);let g='';for(let i=0;i<=8;i++)g+=`<path d='M${i} 0V8M0 ${i}H8' stroke='#8a9' stroke-width='.04'/>`;
+M.innerHTML=`<div class='card'><h2>🔷 مساحت مثلث روی شبکه</h2><p class='sub'>مساحت هر خانه ۱ واحد است.</p><svg viewBox='-.2 -.2 8.4 8.4' width='100%' height='280'>${g}<polygon points='${p.map(x=>x.join(',')).join(' ')}' fill='rgba(240,162,26,.45)' stroke='#e07a1f' stroke-width='.08'/></svg><div class='opts'>${o.map(x=>`<button class='opt' data-v='${x}'>${x}</button>`).join('')}</div><p id='fb' class='sub'></p><button class='btn' id='nx' style='display:none'>بعدی ←</button></div>`;pick(a,grd)}
+function prm(){let ns,pr;do{ns=[...new Set(Array.from({length:30},()=>R(2,60)))].slice(0,12);pr=new Set(ns.filter(isP))}while(pr.size<2);
+M.innerHTML=`<div class='card'><h2>🎯 شکار عددهای اول</h2><p class='sub'>همهٔ عددهای اول را انتخاب کن و بررسی بزن.</p><div class='mem'>${ns.map(n=>`<button class='mc up' data-n='${n}'>${n}</button>`).join('')}</div><button class='btn' id='ck' style='width:100%;margin-top:10px'>بررسی</button><p class='big' id='mr'></p></div>`;
+document.querySelectorAll('.mc').forEach(b=>b.onclick=()=>b.classList.toggle('sel'));
+document.getElementById('ck').onclick=()=>{const s=[...document.querySelectorAll('.mc.sel')].map(b=>+b.dataset.n),ok=s.length==pr.size&&s.every(n=>pr.has(n));document.getElementById('mr').innerHTML=ok?'🎉 آفرین!':'اول‌ها: '+[...pr].join('، ');if(ok)addXp(8);const b=document.getElementById('ck');b.textContent='دور بعد ←';b.onclick=prm}}
+function dice(){M.innerHTML=`<div class='card'><h2>🎲 پنل احتمال</h2><p class='sub'>دو تاس را چند بار می‌اندازیم. هرچه بیشتر بیندازی، نتیجه به احتمال واقعی نزدیک‌تر می‌شود (مجموع ۷ پرتکرارترین است: ۱/۶ ≈ ۱۷٪).</p><div class='row'><button class='btn' onclick='rl(10)'>۱۰ بار</button><button class='btn' onclick='rl(100)'>۱۰۰ بار</button><button class='btn' onclick='rl(1000)'>۱۰۰۰ بار</button></div><div id='dc'></div></div>`;rl(10)}
+function rl(n){const c=Array(13).fill(0);for(let i=0;i<n;i++)c[R(1,6)+R(1,6)]++;const m=Math.max(...c);document.getElementById('dc').innerHTML=c.map((v,s)=>s<2?'':`<div style='display:flex;align-items:center;gap:6px;direction:ltr;margin:3px 0'><b style='width:26px'>${s}</b><div style='height:16px;border-radius:8px;background:linear-gradient(90deg,#0e7c86,#f0a21a);width:${Math.max(2,v/m*80)}%'></div><small>${(v*100/n).toFixed(0)}%</small></div>`).join('')}
+const MT={seq:'الگو: تفاضل جمله‌ها را پیدا کن؛ جملهٔ n‌ام = جملهٔ اول + (n−۱) × تفاضل.',int:'عددهای صحیح: اول علامت‌ها را ساده کن (منفیِ منفی = مثبت) و بعد جمع و تفریق کن.',imul:'ضرب: اول علامت (هم‌علامت مثبت، غیرهم‌علامت منفی)، بعد قدرمطلق‌ها را ضرب کن.',lin:'معادله: مجهول را یک طرف و عددها را طرف دیگر ببر، بعد بر ضریب x تقسیم کن.',lin2:'جملهٔ x‌دار را یک طرف جمع کن و عددها را طرف دیگر؛ آخر جواب را جایگذاری و چک کن.',tri:'زاویهٔ مجهول مثلث = ۱۸۰ منهای مجموع دو زاویهٔ دیگر.',gcd:'ب.م.م: هر دو عدد را تجزیه کن و عامل‌های مشترک با کمترین توان را ضرب کن.',lcm:'ک.م.م = (حاصل‌ضرب دو عدد) ÷ ب.م.م.',prime:'برای اول بودن، فقط تا جذر عدد را امتحان کن.',area:'مساحت مثلث = ½ × قاعده × ارتفاع؛ ارتفاع بر قاعده عمود است.',vol:'حجم مکعب‌مستطیل = طول × عرض × ارتفاع؛ یکاها باید یکسان باشند.',pow:'ضرب توان‌های هم‌پایه: پایه را نگه دار و توان‌ها را جمع کن.',sqrt:'جذر مربع کامل‌ها را از جدول مربع‌ها (۱ تا ۱۵) بشناس.',move:'انتقال: راست و چپ روی x، بالا و پایین روی y اثر می‌گذارد.',mean:'میانگین = جمع داده‌ها ÷ تعداد داده‌ها.',prob:'احتمال = حالت‌های مطلوب ÷ کل حالت‌ها (برای درصد ضرب در ۱۰۰).',pct:'a٪ از N = N × a ÷ ۱۰۰.',poly:'مجموع زوایای n‌ضلعی = (n−۲) × ۱۸۰.',diag:'تعداد قطرها = n(n−۳) ÷ ۲.',regang:'زاویهٔ هر رأس n‌ضلعی منتظم = مجموع زوایا ÷ n.',expand:'اتحادها: (a+b)² = a²+2ab+b² ؛ تفاضل دو مربع تجزیه می‌شود.',slope:'شیب = تغییر y ÷ تغییر x بین دو نقطه.',line:'در y=mx+c مقدار x را جایگذاری کن و y را حساب کن.',pyth:'وتر² = مجموع مربع‌های دو ضلع دیگر؛ سه‌تایی‌های ۳-۴-۵ و ۵-۱۲-۱۳ را حفظ کن.',mid:'وسط دو نقطه: میانگین x‌ها و میانگین y‌ها.',circ:'زاویهٔ محاطی = نصف زاویهٔ مرکزی روبه‌رو به همان کمان.',setu:'|A∪B| = |A| + |B| − |A∩B|.',rad:'زیر رادیکال را به (مربع کامل × عدد) بشکن و مربع کامل را بیرون بیاور.',ineq:'مثل معادله حل کن؛ در ضرب یا تقسیم بر عدد منفی، جهت نامساوی عوض می‌شود.',sys:'دو معادله را جمع کن تا y حذف شود؛ x را پیدا کن و در یکی از معادله‌ها بگذار.',rat:'صورت را تجزیه کن و عامل مشترک با مخرج را خط بزن.',pyr:'حجم هرم = ⅓ × مساحت قاعده × ارتفاع.'};
+function gate(){M.innerHTML=`<div class='card'><h2>به محتشم خوش آمدی 👋</h2><p class='sub'>قبل از ورود، خودت را معرفی کن.</p><label class='fl'>نام<input type='text' id='gn' style='direction:rtl' value='${me.name}'></label><label class='fl' style='margin-top:8px'>نام خانوادگی<input type='text' id='gf' style='direction:rtl' value='${me.fam}'></label><div class='row'>${[7,8,9].map(g=>`<button class='g ${g===me.grade?'on':''}' onclick='me.name=gn.value;me.fam=gf.value;me.grade=${g};gate()'>کلاس ${G[g]}</button>`).join('')}</div><button class='btn' style='width:100%' id='ge'>ورود به محتشم</button><p class='bad' id='gerr'></p></div>`;
+document.getElementById('ge').onclick=()=>{const n=gn.value.trim(),f=gf.value.trim();if(!n||!f){gerr.textContent='نام و نام خانوادگی را بنویس.';return}me.name=n;me.fam=f;me.ok=1;setT();document.querySelector('.mb').style.display='';go('lab')}}
+function gx(){const o=document.getElementById('gm');if(o._stop)o._stop();o.style.display='none';document.querySelector('.mb').style.display=''}
+function gta(){const o=document.getElementById('gm');if(o._stop)o._stop();o.style.display='block';dr(0);document.querySelector('.mb').style.display='none';
+const cv=document.getElementById('gc'),g=cv.getContext('2d');let W,H;const rs=()=>{const d=devicePixelRatio||1;W=innerWidth;H=innerHeight;cv.width=W*d;cv.height=H*d;g.setTransform(d,0,0,d,0,0)};rs();addEventListener('resize',rs);
+const B=300,Rd=110,NN=20,S=B*NN,solid=(x,y)=>x<0||y<0||x>=S||y>=S||(x%B>=Rd&&y%B>=Rd),rn=(a,b)=>a+Math.random()*(b-a),cl=v=>Math.max(20,Math.min(S-20,v));
+const gs=gens(me.grade);let p={x:B*3+Rd/2,y:B*3+Rd/2,a:0,v:0},sc=0,hp=100,q,pk=[],run=1;const K={},T={};
+const np=()=>{const i=Math.max(0,Math.min(NN-1,Math.round((p.x-Rd/2)/B)+R(-1,1))),j=Math.max(0,Math.min(NN-1,Math.round((p.y-Rd/2)/B)+R(-1,1)));return Math.random()<.5?[i*B+Rd/2,cl(p.y+rn(-450,450))]:[cl(p.x+rn(-450,450)),j*B+Rd/2]};
+const nq=()=>{q=mk(P(gs));pk=q.o.map(v=>{const[x,y]=np();return{v,x,y}});document.getElementById('gq').innerHTML=q.t};nq();
+const kd=e=>{K[e.code]=1;if(e.code.startsWith('Arrow')||e.code==='Space')e.preventDefault()},ku=e=>K[e.code]=0;addEventListener('keydown',kd);addEventListener('keyup',ku);
+o.querySelectorAll('.tp button').forEach(b=>{const k=b.dataset.k;b.onpointerdown=e=>{e.preventDefault();T[k]=1};b.onpointerup=b.onpointerleave=b.onpointercancel=()=>T[k]=0});
+o._stop=()=>{run=0;removeEventListener('keydown',kd);removeEventListener('keyup',ku);removeEventListener('resize',rs)};
+let last=performance.now();
+const loop=t=>{if(!run)return;const dt=Math.min(.05,(t-last)/1000);last=t;
+const u=K.KeyW||K.ArrowUp||T.u,d=K.KeyS||K.ArrowDown||T.d,l=K.KeyA||K.ArrowLeft||T.l,r=K.KeyD||K.ArrowRight||T.r;
+p.v+=((u?260:0)-(d?(p.v>0?420:200):0))*dt;if(!u&&!d)p.v*=Math.pow(.4,dt);p.v=Math.max(-120,Math.min(380,p.v));p.a+=((r?1:0)-(l?1:0))*2.4*dt*Math.max(-1,Math.min(1,p.v/120));
+const nx=p.x+Math.cos(p.a)*p.v*dt,ny=p.y+Math.sin(p.a)*p.v*dt,cx=Math.cos(p.a)*16,cy=Math.sin(p.a)*16;
+if(solid(nx+cx,ny+cy)||solid(nx-cx,ny-cy)){if(Math.abs(p.v)>140)hp-=Math.abs(p.v)/30;p.v*=-.35}else{p.x=nx;p.y=ny}
+for(const k of pk)if((k.x-p.x)**2+(k.y-p.y)**2<900){if(k.v===q.a){sc++;addXp(5);nq()}else{hp-=15;pk=pk.filter(z=>z!==k)}break}
+document.getElementById('gs').textContent=fa(sc);document.getElementById('ghp').textContent='❤ '+fa(Math.max(0,Math.round(hp)))+'٪';
+if(hp<=0){run=0;document.getElementById('gq').innerHTML='🚗 پایان! امتیاز تو: '+fa(sc)+' <button class="btn" id="ra">دوباره</button>';document.getElementById('ra').onclick=gta}
+const vx=p.x-W/2,vy=p.y-H/2;g.fillStyle='#0c0d11';g.fillRect(0,0,W,H);g.save();g.translate(-vx,-vy);g.fillStyle='#3a3d46';g.fillRect(0,0,S,S);
+g.strokeStyle='#e8d56a';g.lineWidth=3;g.setLineDash([26,22]);const i0=Math.max(0,Math.floor(vx/B)),i1=Math.min(NN-1,Math.floor((vx+W)/B)),j0=Math.max(0,Math.floor(vy/B)),j1=Math.min(NN-1,Math.floor((vy+H)/B));
+g.beginPath();for(let i=i0;i<=i1;i++){g.moveTo(i*B+Rd/2,0);g.lineTo(i*B+Rd/2,S)}for(let j=j0;j<=j1;j++){g.moveTo(0,j*B+Rd/2);g.lineTo(S,j*B+Rd/2)}g.stroke();g.setLineDash([]);
+for(let i=i0;i<=i1;i++)for(let j=j0;j<=j1;j++){const x=i*B+Rd,y=j*B+Rd,s=B-Rd,h=(i*47+j*83)%360;g.fillStyle='#8c8f99';g.fillRect(x,y,s,s);g.fillStyle=`hsl(${h} 28% 40%)`;g.fillRect(x+10,y+10,s-20,s-20);g.fillStyle=`hsl(${h} 24% 50%)`;g.fillRect(x+30,y+30,s-60,s-60)}
+g.font='bold 15px sans-serif';g.textAlign='center';g.textBaseline='middle';for(const k of pk){g.fillStyle='#ffd23f';g.beginPath();g.arc(k.x,k.y,21,0,6.28);g.fill();g.fillStyle='#4a3500';g.fillText(k.v,k.x,k.y+1)}
+g.save();g.translate(p.x,p.y);g.rotate(p.a);g.fillStyle='#0f766e';g.fillRect(-19,-10,38,20);g.fillStyle='#bfe3ff';g.fillRect(2,-8,9,16);g.restore();g.restore();
+requestAnimationFrame(loop)};requestAnimationFrame(loop)}
+const RK=['تازه‌وارد','کنجکاو','کاشف','محاسب','ریاضی‌دان','تیزهوش','استاد','نابغه'];
+function pop(t){const d=document.createElement('div');d.className='pop';d.textContent=t;document.body.appendChild(d);setTimeout(()=>d.remove(),1200)}
+function addXp(n){const l0=Math.floor(xp/50);xp+=n;const l=Math.floor(xp/50),nm=RK[Math.min(l,7)];
+[['lv','رتبه '+fa(l+1)+': '+nm],['rt','رتبه '+fa(l+1)+': '+nm],['xt',fa(xp)+' XP'],['rx',fa(xp)+' XP']].forEach(([i,t])=>{const e=document.getElementById(i);if(e)e.textContent=t});
+['xb','rb'].forEach(i=>{const e=document.getElementById(i);if(e)e.style.width=(xp%50)*2+'%'});
+pop('+'+fa(n)+' XP ✨');const r=document.getElementById('rk');r.classList.remove('flash');void r.offsetWidth;r.classList.add('flash');
+if(l>l0)setTimeout(()=>pop('🎉 رتبهٔ جدید: '+nm),700)}
+function formulas(){M.innerHTML=[7,8,9].map(g=>`<div class='card'><h2>📖 فرمول‌های پایهٔ ${G[g]}</h2>${C[g].map((c,k)=>`<p style='margin:6px 0'><b>فصل ${fa(k+1)}: ${c[0]}</b></p><div class='key'>${c[2]}</div>`).join('')}</div>`).join('')}
+function books(){M.innerHTML=`<div class='card'><h2>📕 کتاب‌های درسی ریاضی هفتم، هشتم و نهم</h2><p>نسخهٔ رسمی PDF کتاب‌های درسی را شرکت چاپ و نشر کتاب‌های درسی ایران منتشر می‌کند. حق نشر آن‌ها محفوظ است؛ پس از همان‌جا بگیر.</p><a class='btn' target='_blank' rel='noopener' href='https://chap.sch.ir'>وبگاه رسمی کتاب‌های درسی (chap.sch.ir)</a><a class='btn alt' target='_blank' rel='noopener' href='https://www.irtexbook.ir'>وبگاه دوم (irtexbook.ir)</a><div class='key'>داخل وبگاه: مقطع «متوسطه اول» ← پایهٔ هفتم، هشتم یا نهم ← کتاب «ریاضی» را دانلود کن. بعد از دانلود، درسنامه و سؤال هر فصل را از بخش «درس‌ها» همین سایت مرور کن.</div></div>`}
+(function(){const dw=document.getElementById('dw');dw.querySelectorAll('.mi,hr').forEach(e=>e.remove());
+const it=[['lab','⚙️','ابزارهای ریاضی','ب.م.م، توان، رادیکال و بیش از ۱۰ ابزار دیگر'],['ai','🧙','تعامل با محتشم (هوش مصنوعی)','سؤالت را بپرس؛ راهنمایی گام‌به‌گام می‌گیری'],['home','📚','درس‌ها و بانک سؤال','درسنامهٔ همهٔ فصل‌ها و سؤال بی‌پایان'],['formulas','📖','کتابخانهٔ فرمول','فرمول‌های کلیدی هر فصل'],['books','📕','کتاب‌های درسی (PDF)','دانلود رسمی کتاب ریاضی هفتم تا نهم'],['games','🎮','مینی‌گیم‌های ریاضی','هندسه، احتمال و عددهای اول'],['gta','🚗','ماشین‌سوار ریاضی','رانندگی و گرفتن عدد درست'],['timer','⏱','چالش ۶۰ ثانیه','در یک دقیقه هر چقدر می‌توانی حل کن']];
+dw.insertAdjacentHTML('beforeend',it.map(x=>`<button class='mi mc2' onclick="go('${x[0]}')"><i>${x[1]}</i><span><b>${x[2]}</b><small>${x[3]}</small></span></button>`).join(''))})();
+const BK={7:['6f692eb791b660409f5c94fe5107615d','f43e16828804f7bc0997a2f5b9fd4e26'],8:['76606e56663455a4ccf74c7a16925c35','d4bba8099f6c73dfca58a0a63600287f'],9:['98fef73c5af49593652634e5a2308d50','086836061d9ee57dc39d0647b271d500']};
+books=()=>{const gs=[me.grade,...[7,8,9].filter(g=>g!==me.grade)];M.innerHTML=gs.map(g=>`<div class='card'><h2>📕 کتاب‌های ریاضی پایهٔ ${G[g]}${g===me.grade?' ⭐':''}</h2><a class='btn' target='_blank' rel='noopener' href='/_blob/${BK[g][0]}'>📘 کتاب ریاضی وزارتی (PDF)</a><a class='btn alt' target='_blank' rel='noopener' href='/_blob/${BK[g][1]}'>🏅 ریاضیات محتوای تکمیلی · استعدادهای درخشان (تیزهوشان)</a></div>`).join('')+`<div class='card'><p class='sub'>نسخهٔ رسمی کتاب‌ها را هم می‌توانی از وبگاه شرکت چاپ و نشر کتاب‌های درسی ایران بگیری: <a href='https://chap.sch.ir' target='_blank' rel='noopener' style='color:var(--acc2)'>chap.sch.ir</a></p></div>`};
+let bg=0,pdfDoc=null,pg=1;const ALL=[...T];
+ALL.push(
+['معادلهٔ خطی',['a','b','c'],[3,5,20],v=>{const a=+v[0],b=+v[1],c=+v[2];if(!a)throw'a نباید صفر باشد';return rs(['x',+((c-b)/a).toFixed(4)])+`<div class='st'>${a}x + (${b}) = ${c} ⇒ ${a}x = ${c-b}</div>`}],
+['سطح و حجم',['طول','عرض','ارتفاع'],[4,3,5],v=>{const[l,w,h]=v.map(Number);if(!(l>0&&w>0&&h>0))throw'اعداد مثبت بده';return rs(['حجم',l*w*h],['مساحت کل',2*(l*w+l*h+w*h)],['قطر',Math.sqrt(l*l+w*w+h*h).toFixed(3)])}],
+['احتمال',['حالت‌های مطلوب','کل حالت‌ها'],[3,10],v=>{const k=+v[0],n=+v[1];if(!(n>=1&&k>=0&&k<=n))throw'۰ ≤ مطلوب ≤ کل';return rs(['احتمال',k+'/'+n],['درصد',+(k*100/n).toFixed(2)+'٪'])}],
+['درصد',['درصد','عدد'],[25,240],v=>rs(['حاصل',+(v[0]*v[1]/100).toFixed(4)])],
+['اتحادها',['a','b'],[5,3],v=>{const a=+v[0],b=+v[1];return rs(['(a+b)²',(a+b)**2],['(a−b)²',(a-b)**2],['a²−b²',a*a-b*b])}],
+['شیب خط',['x1','y1','x2','y2'],[1,2,4,8],v=>{const[a,b,c,d]=v.map(Number);if(a==c)throw'خط قائم است و شیب ندارد';const m=(d-b)/(c-a);return rs(['شیب',+m.toFixed(4)],['معادله','y = '+(+m.toFixed(3))+'x + ('+(+(b-m*a).toFixed(3))+')'])}],
+['وسط و فاصله',['x1','y1','x2','y2'],[1,2,7,10],v=>{const[a,b,c,d]=v.map(Number);return rs(['وسط','('+(a+c)/2+', '+(b+d)/2+')'],['فاصله',Math.hypot(c-a,d-b).toFixed(4)])}],
+['دایره',['شعاع'],[7],v=>{const r=+v[0];if(!(r>0))throw'شعاع مثبت بده';return rs(['محیط',(2*Math.PI*r).toFixed(3)],['مساحت',(Math.PI*r*r).toFixed(3)],['قطر',2*r])}],
+['مجموعه‌ها',['|A|','|B|','|A∩B|'],[12,9,4],v=>{const[a,b,i]=v.map(Number);if(i>Math.min(a,b)||i<0)throw'اشتراک از خود مجموعه‌ها بزرگ‌تر نمی‌شود';return rs(['|A∪B|',a+b-i],['فقط A',a-i],['فقط B',b-i])}],
+['دستگاه دو معادله',['a1','b1','c1','a2','b2','c2'],[1,1,10,1,-1,2],v=>{const[a,b,c,d,e,f]=v.map(Number),D=a*e-d*b;if(!D)throw'دستگاه جواب یکتا ندارد';return rs(['x',+((c*e-f*b)/D).toFixed(4)],['y',+((a*f-d*c)/D).toFixed(4)])+`<p class='sub'>${L(a+'x+'+b+'y='+c)} · ${L(d+'x+'+e+'y='+f)}</p>`}],
+['حجم استوانه، مخروط، کره',['شعاع','ارتفاع'],[3,5],v=>{const r=+v[0],h=+v[1];if(!(r>0&&h>0))throw'اعداد مثبت بده';const p=Math.PI;return rs(['استوانه',(p*r*r*h).toFixed(2)],['مخروط',(p*r*r*h/3).toFixed(2)],['کره',(4/3*p*r**3).toFixed(2)])}],
+['نابرابری',['a','b','c'],[2,3,11],v=>{const a=+v[0],b=+v[1],c=+v[2];if(!a)throw'a نباید صفر باشد';const t=+((c-b)/a).toFixed(4);return rs([a+'x + '+b+' > '+c,a>0?'x > '+t:'x < '+t])}]);
+const TS={7:[0,1,2,3,14,15,16,9,4,6,13],8:[8,7,17,18,19,20,21,6,4,0,13],9:[22,23,25,24,18,6,10,12,5,4,13]};
+function setT(){T.length=0;TS[me.grade].forEach(i=>T.push(ALL[i]));cur=0;bg=0}
+books=()=>{const g=bg||me.grade;M.innerHTML=`<div class='row'>${[7,8,9].map(x=>`<button class='g ${x===g?'on':''}' onclick='bg=${x};books()'>پایهٔ ${G[x]}</button>`).join('')}</div><div class='card'><h2>📕 کتاب‌های ریاضی پایهٔ ${G[g]}</h2><button class='btn' style='width:100%;margin:6px 0' onclick="openPdf('${BK[g][0]}','کتاب ریاضی ${G[g]} (وزارتی)')">📘 کتاب ریاضی وزارتی</button><button class='btn alt' style='width:100%' onclick="openPdf('${BK[g][1]}','ریاضیات تکمیلی ${G[g]} · استعدادهای درخشان')">🏅 ریاضیات محتوای تکمیلی · استعدادهای درخشان (تیزهوشان)</button></div><div class='card'><p class='sub'>نسخهٔ رسمی کتاب‌ها: chap.sch.ir</p></div>`};
+function loadPdfJs(){return new Promise((ok,no)=>{if(window.pdfjsLib)return ok();const s=document.createElement('script');s.src='https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js';s.onload=()=>{pdfjsLib.GlobalWorkerOptions.workerSrc='https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';ok()};s.onerror=()=>no(new Error('بارگذاری خوانندهٔ PDF ممکن نشد'));document.head.appendChild(s)})}
+let pdfZoom=1;
+async function openPdf(id,title){pdfZoom=1;M.innerHTML=`<button class='btn alt' onclick="go('books')">← کتاب‌ها</button><div class='card' style='margin-top:12px;text-align:center'><h2>${title}</h2><div class='row'><button class='btn' id='pp'>◀ قبلی</button><input type='text' id='pn' inputmode='numeric' style='max-width:90px;text-align:center' aria-label='شماره صفحه'><button class='btn' id='pnx'>بعدی ▶</button></div><div class='row' style='justify-content:center;align-items:center'><button class='btn alt' id='zmout' aria-label='کوچک‌نمایی'>− کوچک‌نمایی</button><b id='zmlabel'>۱۰۰٪</b><button class='btn alt' id='zmin' aria-label='بزرگ‌نمایی'>＋ بزرگ‌نمایی</button><button class='btn alt' id='zmfit'>اندازهٔ صفحه</button></div><div id='pdfviewport' style='width:100%;overflow:auto;text-align:center;background:#fff;border-radius:8px;max-height:75vh'><canvas id='pc' style='display:block;margin:0 auto;max-width:none;background:#fff'></canvas></div><p class='sub' id='ps'>در حال بارگذاری کتاب… (کتاب‌های بزرگ کمی طول می‌کشند)</p></div>`;
+const ps=document.getElementById('ps');try{await loadPdfJs();pdfDoc=await pdfjsLib.getDocument('/_blob/'+id).promise;pg=1;await showPg();
+document.getElementById('pp').onclick=()=>{if(pg>1){pg--;showPg()}};
+document.getElementById('pnx').onclick=()=>{if(pg<pdfDoc.numPages){pg++;showPg()}};
+document.getElementById('pn').onchange=e=>{const n=parseInt(String(e.target.value).replace(/[۰-۹]/g,d=>'۰۱۲۳۴۵۶۷۸۹'.indexOf(d)));if(n>=1&&n<=pdfDoc.numPages){pg=n;showPg()}};
+document.getElementById('zmin').onclick=()=>{pdfZoom=Math.min(3,pdfZoom+.25);showPg()};
+document.getElementById('zmout').onclick=()=>{pdfZoom=Math.max(.75,pdfZoom-.25);showPg()};
+document.getElementById('zmfit').onclick=()=>{pdfZoom=1;showPg()};
+}catch(e){ps.textContent='کتاب باز نشد: '+(e&&e.message||e)}}
+async function showPg(){const p=await pdfDoc.getPage(pg),cv=document.getElementById('pc'),vp=document.getElementById('pdfviewport'),baseW=Math.max(240,vp.clientWidth-16),fit=baseW/p.getViewport({scale:1}).width,scale=fit*pdfZoom,dpr=Math.min(2,window.devicePixelRatio||1),v=p.getViewport({scale:scale*dpr});cv.width=Math.floor(v.width);cv.height=Math.floor(v.height);cv.style.width=(v.width/dpr)+'px';cv.style.height=(v.height/dpr)+'px';await p.render({canvasContext:cv.getContext('2d'),viewport:v}).promise;document.getElementById('ps').textContent='صفحهٔ '+fa(pg)+' از '+fa(pdfDoc.numPages)+' · بزرگ‌نمایی '+fa(Math.round(pdfZoom*100))+'٪';document.getElementById('pn').value=fa(pg);document.getElementById('zmlabel').textContent=fa(Math.round(pdfZoom*100))+'٪'}
+const mb=document.querySelector('.mb');document.body.appendChild(mb);mb.onclick=()=>dr(!document.getElementById('dw').classList.contains('open'));
+go('gate');
+</script>
+</body>
+</html>
